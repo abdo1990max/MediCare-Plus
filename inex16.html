@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MediCare Plus - Your Health Partner</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styel16/CS16.css">
+  <style>
+    
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm navbar-transparent fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-heartbeat" style="color: #2E86AB;"></i>
+      </a>
+      <a href="#" class="text-decoration-none"><h2 class="nameof-resturant" style="font-family: 'Segoe UI'">MediCare Plus</h2></a>
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+     </button>
+
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link home-active" href="#">Home</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle menu-activ" href="#" role="button" data-bs-toggle="dropdown">
+              <span class="spn1">M</span>edical Specialties
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Cardiology</a></li>
+              <li><a class="dropdown-item" href="#">Neurology</a></li>
+              <li><hr class="dropdown-divider line1"></li>
+              <li><a class="dropdown-item" href="#">Pediatrics</a></li>
+              <li><a class="dropdown-item" href="#">Orthopedics</a></li>
+              <li><a class="dropdown-item" href="#">Dermatology</a></li>
+              <li><a class="dropdown-item" href="#">Oncology</a></li>
+              <li><a class="dropdown-item" href="#">More...</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+        </ul>
+
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search Doctors" />
+          <button class="btn me-2 text-white btn-search" style="background-color: #2E86AB;" type="submit">Search</button>
+          <button type="button" class="btn btn-outline-dark login-btn" data-bs-toggle="modal" data-bs-target="#loginModal">Patient Login</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header text-white" style="background-color: #2E86AB;">
+          <h5 class="modal-title" id="loginModalLabel">Patient Portal</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="emailInput" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="emailInput" placeholder="patient@example.com">
+              <small class="text-muted">Your medical information is secure with us.</small>
+            </div>
+            <div class="mb-3">
+              <label for="passwordInput" class="form-label">Password</label>
+              <input type="password" class="form-control" id="passwordInput">
+            </div>
+            <div class="form-check form-switch mb-3">
+              <input class="form-check-input" type="checkbox" id="rememberSwitch">
+              <label class="form-check-label text-muted" for="rememberSwitch">Remember me</label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-login" style="background-color: #2E86AB; color: white;">Login</button>
+          <button type="button" class="btn text-white" data-bs-dismiss="modal" style="background-color: #E74C3C;">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <aside>
+      <ul class="social-fixed">
+        <li data-tooltip="Facebook" style="--bg: #3a83f7">
+          <a href="#" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+        <li data-tooltip="WhatsApp Support" style="--bg: #25D366">
+          <a href="#" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </li>
+        <li data-tooltip="Twitter" style="--bg: #101419">
+          <a href="#" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li data-tooltip="LinkedIn" style="--bg: #0077B5">
+          <a href="#" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </li>
+        <li data-tooltip="Instagram" style="--bg: linear-gradient(-45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5)">
+          <a href="#" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <div id="demo" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner">
+        <div class="carousel-item active position-relative">
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+               class="d-block w-100 img-fluid h-100 h-sm-100 h-md-75 h-lg-75 h-xl-75"
+               style="max-height: 550px; object-fit: cover;"
+               alt="Medical Care">
+          <div class="overlay-box text-black p-2 p-sm-3 w-100 w-md-75">
+            <h2 class="fs-4 fs-sm-4 fs-md-3 fs-lg-2 gradient-text-common">Advanced Medical Care</h2>
+            <p class="fs-6 fs-sm-6 fs-md-5">Your health is our priority. Expert care with compassion.</p>
+            <a href="#" class="btn btn-sm text-white" style="background-color: #2E86AB;">Learn More</a>
+          </div>
+        </div>
+        <div class="carousel-item position-relative">
+          <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+               class="d-block w-100 img-fluid h-100 h-sm-100 h-md-75 h-lg-75 h-xl-75"
+               style="max-height: 550px; object-fit: cover;"
+               alt="Healthcare Team">
+          <div class="overlay-box text-black p-2 p-sm-3 w-100 w-md-75">
+            <h2 class="fs-4 fs-sm-4 fs-md-3 fs-lg-2 gradient-text-common">Expert Healthcare Team</h2>
+            <p class="fs-6 fs-sm-6 fs-md-5">Dedicated professionals committed to your wellbeing!</p>
+            <a href="#" class="btn btn-sm text-white" style="background-color: #2E86AB;">Meet Our Doctors</a>
+          </div>
+        </div>
+        <div class="carousel-item position-relative">
+          <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+               class="d-block w-100 img-fluid h-100 h-sm-100 h-md-75 h-lg-75 h-xl-75"
+               style="max-height: 550px; object-fit: cover;"
+               alt="Medical Technology">
+          <div class="overlay-box text-black p-2 p-sm-3 w-100 w-md-75">
+            <h2 class="fs-4 fs-sm-4 fs-md-3 fs-lg-2 gradient-text-common">State-of-the-Art Technology</h2>
+            <p class="fs-6 fs-sm-6 fs-md-5">Modern equipment for accurate diagnosis and treatment</p>
+            <a href="#" class="btn btn-sm text-white" style="background-color: #2E86AB;">View Services</a>
+          </div>
+        </div>
+        <div class="carousel-item position-relative">
+          <img src="styel16/downlo99ad.jpg"
+               class="d-block w-100 img-fluid h-100 h-sm-100 h-md-75 h-lg-75 h-xl-75"
+               style="max-height: 550px; object-fit: cover;"
+               alt="Patient Care">
+          <div class="overlay-box text-black p-2 p-sm-3 w-100 w-md-75">
+            <h2 class="fs-4 fs-sm-4 fs-md-3 fs-lg-2 gradient-text-common">Compassionate Patient Care</h2>
+            <p class="fs-6 fs-sm-6 fs-md-5">Personalized treatment plans for every patient</p>
+            <a href="#" class="btn btn-sm text-white" style="background-color: #2E86AB;">Book Appointment</a>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </main>
+
+  <section>
+    <div class="container modal-welcome mt-3 welcome">
+      <h3 class="gradient-text">Welcome to MediCare Plus</h3>
+      <p>Welcome to our comprehensive medical center, where cutting-edge healthcare meets personalized patient care and professional excellence.</p>
+      <button type="button" class="btn btn-welcome">
+        About Our Mission
+      </button>
+    </div>
+  </section>
+
+  <div class="container my-4">
+    <hr class="border border-primary border-1 opacity-75">
+  </div>
+
+  <section>
+    <div class="d-pop container d-flex justify-content-center align-items-center" style="height: 120px;">
+      <h2 class="text-white title1">Leading Healthcare Services</h2>
+    </div>
+  </section>
+
+  <section class="bg-light">
+    <div class="container px-2 px-sm-4 py-4">
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item shadow-sm">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button gradient-text2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Cardiology Services
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body small">
+              Comprehensive heart care including diagnostics, treatment, and preventive care for cardiovascular health.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item shadow-sm">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed gradient-text2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Neurology Department
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body small">
+              Advanced neurological care for brain, spine, and nervous system disorders with expert specialists.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item shadow-sm">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed gradient-text2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Emergency Medicine
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body small">
+              24/7 emergency care with rapid response times and life-saving interventions available around the clock.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-fluid py-4">
+    <div class="container translate-box p-3 rounded shadow-sm mb-4 mx-auto" style="background-color: #2C3E50;">
+      <h4 class="text-center p-2 rounded text-black" style="background-color: #F39C12; font-style: italic;">Medical Information Translator</h4>
+      <p class="mt-3 mb-1 fw-bold text-white">Translate Medical Terms <span class="text-w">Click Here</span></p>
+      <button id="btn1" style="background-color: #2E86AB;" class="btn btn-sm mb-2 text-white" data-bs-toggle="tooltip" data-bs-placement="right" title="Copied!">
+        Copy
+      </button>
+      <textarea class="form-control" rows="4" placeholder="Enter medical terms or symptoms..."></textarea>
+    </div>
+
+    <div class="container translate-box p-3 rounded shadow-sm mb-4 mx-auto" style="background-color: #2C3E50;">
+      <h4 class="text-center p-2 rounded text-black" style="background-color: #F39C12; font-style: italic;">Symptom Checker Assistant</h4>
+      <p class="mt-3 mb-1 fw-bold text-white">Describe Your Symptoms <span class="text-w">Get Guidance</span></p>
+      <button id="btn2" style="background-color: #2E86AB;" class="btn btn-sm mb-2 text-white" data-bs-toggle="tooltip" data-bs-placement="right" title="Copied!">
+        Copy
+      </button>
+      <textarea class="form-control" rows="4" placeholder="Describe your symptoms for initial guidance..."></textarea>
+    </div>
+
+    <div class="container translate-box p-3 rounded shadow-sm mb-4 mx-auto" style="background-color: #2C3E50;">
+      <h4 class="text-center p-2 rounded text-black" style="background-color: #F39C12; font-style: italic;">Health Tips & Advice</h4>
+      <p class="mt-3 mb-1 fw-bold text-white">Daily Health Insights <span class="text-w">Stay Healthy</span></p>
+      <button id="btn3" style="background-color: #2E86AB;" class="btn btn-sm mb-2 text-white" data-bs-toggle="tooltip" data-bs-placement="right" title="Copied!">
+        Copy
+      </button>
+      <textarea class="form-control" rows="4" placeholder="Get personalized health tips and advice..."></textarea>
+    </div>
+  </section>
+
+  <div class="container my-4">
+    <hr class="border border-primary border-1 opacity-75">
+  </div>
+
+  <section>
+    <div class="container mt-5">
+      <div class="attachment w-100 rounded-3"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="d-pop container d-flex justify-content-center align-items-center mt-5" style="height: 120px;">
+      <h2 class="text-white gradient-text3">Excellence in Medical Specialties</h2>
+    </div>
+  </section>
+
+  <section>
+    <div class="container pt-5">
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4 cards">
+          <div class="card custom-card">
+            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cardiology">
+            <div class="card-body">
+              <h5 class="card-title">Cardiology</h5>
+              <p class="card-text">Expert heart care with advanced diagnostics and treatment options.</p>
+              <a href="#" class="btn">Book Consultation</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 cards">
+          <div class="card custom-card">
+            <img src="styel16/neurology-image.jpg" alt="Neurology">
+            <div class="card-body">
+              <h5 class="card-title">Neurology</h5>
+              <p class="card-text">Comprehensive brain and nervous system care by specialists.</p>
+              <a href="#" class="btn">Book Consultation</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 cards">
+          <div class="card custom-card">
+            <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pediatrics">
+            <div class="card-body">
+              <h5 class="card-title">Pediatrics</h5>
+              <p class="card-text">Specialized healthcare for children from infancy to adolescence.</p>
+              <a href="#" class="btn">Book Consultation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container pt-5">
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4 cards">
+          <div class="card custom-card">
+            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Orthopedics">
+            <div class="card-body">
+              <h5 class="card-title">Orthopedics</h5>
+              <p class="card-text">Advanced bone, joint, and muscle treatment solutions.</p>
+              <a href="#" class="btn">Book Consultation</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 cards">
+          <div class="card custom-card">
+            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Dermatology">
+            <div class="card-body">
+              <h5 class="card-title">Dermatology</h5>
+              <p class="card-text">Complete skin, hair, and nail care with modern treatments.</p>
+              <a href="#" class="btn">Book Consultation</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 cards">
+          <div class="card custom-card">
+            <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Oncology">
+            <div class="card-body">
+              <h5 class="card-title">Oncology</h5>
+              <p class="card-text">Comprehensive cancer care with compassionate support.</p>
+              <a href="#" class="btn">Book Consultation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container pt-5">
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4 cards">
+          <div class="card custom-card">
+            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Emergency Medicine">
+            <div class="card-body">
+              <h5 class="card-title">Emergency Care</h5>
+              <p class="card-text">24/7 emergency services with rapid response teams.</p>
+              <a href="#" class="btn">Emergency Info</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 cards">
+          <div class="card custom-card">
+            <img src="https://images.unsplash.com/photo-1530497610245-94d3c16cda28?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Radiology">
+            <div class="card-body">
+              <h5 class="card-title">Radiology</h5>
+              <p class="card-text">Advanced imaging services for accurate diagnosis.</p>
+              <a href="#" class="btn">Book Scan</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container mt-5">
+      <div class="attachment2 w-100 rounded-3"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="d-pop container d-flex justify-content-center align-items-center mt-5" style="height: 120px;">
+      <h2 class="text-white gradient-text3">Trusted by Thousands of Patients</h2>
+    </div>
+  </section>
+
+  <section class="container my-5">
+    <div class="row justify-content-center g-4">
+      <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+        <div class="card-thank position-relative">
+          <h6 class="thank-above">Patient Testimonial</h6>
+          <p class="thank-above p2"><i class="far fa-clock"></i> July 14, 2025</p>
+          <div class="pic-circle"></div>
+          <p class="thank-above p3">Dr. Sarah Johnson <br>Chief Medical Officer</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+        <div class="card-thank position-relative">
+          <h6 class="thank-above">Excellence in Care</h6>
+          <p class="thank-above p2"><i class="far fa-clock"></i> July 14, 2025</p>
+          <div class="pic-circle"></div>
+          <p class="thank-above p3">Dr. Michael Chen <br>Head of Cardiology</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+        <div class="card-thank position-relative">
+          <h6 class="thank-above">Community Health Leader</h6>
+          <p class="thank-above p2"><i class="far fa-clock"></i> July 14, 2025</p>
+          <div class="pic-circle"></div>
+          <p class="thank-above p3">Dr. Emily Rodriguez <br>Director of Operations</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container my-4">
+    <hr class="border border-primary border-1 opacity-75">
+  </div>
+
+  <section class="container my-5">
+    <h2 class="offers-title">MediCare Plus Health Programs</h2>
+    <div class="row align-items-center rounded overflow-hidden podcast-box offer11">
+      <div class="col-md-8 p-4">
+        <h5 class="fw-bold title-offers">Preventive Health Screening</h5>
+        <p class="text-muted mb-1">
+          <i class="far fa-calendar-alt me-1 text-primary"></i> Available Mon-Fri, 8 AM - 6 PM</p>
+        <div class="line-offers"></div>
+        <p class="text-secondary">
+          Comprehensive health screenings designed to detect potential health issues early. <br> Our preventive care program includes blood work, imaging studies, and <br> personalized health assessments for optimal wellness.
+        </p>
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <span class="badge bg-secondary"><i class="fas fa-tag me-1"></i>Preventive Care</span>
+          <span class="badge bg-secondary"><i class="fas fa-clock me-1"></i>60 mins</span>
+          <a href="#" class="btn btn-sm episode">
+            <i class="fas fa-calendar me-1"></i>Schedule Screening</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" style="height:200px; width: 40%; object-fit: cover;" alt="Health Screening" class="offer-pic clip-image">
+      </div>
+    </div>
+
+    <div class="row align-items-center rounded overflow-hidden podcast-box offer11 offer22 offer33">
+      <div class="col-md-8 p-4">
+        <h5 class="fw-bold title-offers">Telemedicine Consultations</h5>
+        <p class="text-muted mb-1">
+          <i class="far fa-calendar-alt me-1 text-primary"></i> Available 24/7</p>
+        <div class="line-offers"></div>
+        <p class="text-secondary">
+          Connect with our healthcare professionals from the comfort of your home. <br> Virtual consultations for routine check-ups, follow-ups, and non-emergency <br> medical concerns with secure video technology.
+        </p>
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <span class="badge bg-secondary"><i class="fas fa-tag me-1"></i>Telemedicine</span>
+          <span class="badge bg-secondary"><i class="fas fa-clock me-1"></i>30 mins</span>
+          <a href="#" class="btn btn-sm episode">
+            <i class="fas fa-video me-1"></i>Start Video Call</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <img src="styel16/downl66oad.jpg" style="height:200px; width: 40%; object-fit: cover;" alt="Wellness" class="offer-pic clip-image">
+      </div>
+    </div>
+
+    <div class="row align-items-center rounded overflow-hidden podcast-box offer11 offer22">
+      <div class="col-md-8 p-4">
+        <h5 class="fw-bold title-offers">Wellness & Nutrition Programs</h5>
+        <p class="text-muted mb-1">
+          <i class="far fa-calendar-alt me-1 text-primary"></i> Ongoing Programs</p>
+        <div class="line-offers"></div>
+        <p class="text-secondary">
+          Personalized wellness programs focusing on nutrition, fitness, and lifestyle <br> modifications. Our certified nutritionists and wellness coaches provide <br> comprehensive support for your health journey.
+        </p>
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <span class="badge bg-secondary"><i class="fas fa-tag me-1"></i>Wellness</span>
+          <span class="badge bg-secondary"><i class="fas fa-clock me-1"></i>45 mins</span>
+          <a href="#" class="btn btn-sm episode">
+            <i class="fas fa-leaf me-1"></i>Join Program</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" style="height:200px; width: 40%; object-fit: cover;" alt="Wellness" class="offer-pic clip-image">
+      </div>
+    </div>
+
+    <div class="row align-items-center rounded overflow-hidden podcast-box offer11 offer22 offer33">
+      <div class="col-md-8 p-4">
+        <h5 class="fw-bold title-offers">Mental Health Support</h5>
+        <p class="text-muted mb-1">
+          <i class="far fa-calendar-alt me-1 text-primary"></i> Confidential Support Available</p>
+        <div class="line-offers"></div>
+        <p class="text-secondary">
+          Comprehensive mental health services including counseling, therapy, and <br> psychiatric care. Our mental health professionals provide compassionate <br> support in a safe and confidential environment.
+        </p>
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <span class="badge bg-secondary"><i class="fas fa-tag me-1"></i>Mental Health</span>
+          <span class="badge bg-secondary"><i class="fas fa-clock me-1"></i>50 mins</span>
+          <a href="#" class="btn btn-sm episode">
+            <i class="fas fa-heart me-1"></i>Get Support</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"style="height:200px; width: 40%; object-fit: cover;" alt="Wellness" class="offer-pic clip-image">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="title-join">
+      <h2>Connect With Us</h2>
+    </div>
+    <div class="join d-flex flex-wrap justify-content-center gap-3 p-3">
+      <a href="#" class="text-decoration-none">
+        <div class="items text-center">
+          <h5>Health Portal</h5>
+          <h6 class="h62">Access Records</h6>
+        </div>
+      </a>
+
+      <a href="#" class="text-decoration-none">
+        <div class="items item2 text-center">
+          <h5>Emergency Line</h5>
+          <h6 class="h62">24/7 Support</h6>
+        </div>
+      </a>
+
+      <a href="#" class="text-decoration-none">
+        <div class="items item3 text-center">
+          <h5>Health Tips</h5>
+          <h6 class="h62">Watch Videos</h6>
+        </div>
+      </a>
+
+      <a href="#" class="text-decoration-none">
+        <div class="items item4 text-center">
+          <h5>Community</h5>
+          <h6 class="h62">Join Discussion</h6>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container-fluid foot">
+      <div class="row text-center gy-4" style="background-color: #2E86AB;">
+        <div class="col-12 col-md-4">
+          <div class="line-foot"></div>
+          <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" class="img-foot" alt="medical center">
+          <span class="spn-foot">Top-Rated Medical Center</span>
+          <div class="line-foot"></div>
+          <p class="foot-hover">Tel: +1 (555) 123-4567</p>
+          <p class="foot-hover">Address: 123 Health Street, Medical District</p>
+          <p class="foot-hover">Emergency: +1 (555) 911-HELP</p>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="line-foot"></div>
+          <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" class="img-foot" alt="healthcare">
+          <span class="spn-foot">Comprehensive Healthcare</span>
+          <div class="line-foot"></div>
+          <p class="foot-hover">Appointments: +1 (555) 234-5678</p>
+          <p class="foot-hover">Email: info@medicareplus.com</p>
+          <p class="foot-hover">Patient Portal: portal.medicareplus.com</p>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="line-foot"></div>
+          <img src="styel16/downl222oad.jpg" class="img-foot" alt="medical excellence">
+          <span class="spn-foot">Medical Excellence</span>
+          <div class="line-foot"></div>
+          <p class="foot-hover">Hours: Mon-Fri 8AM-8PM</p>
+          <p class="foot-hover">Weekend: Sat-Sun 9AM-5PM</p>
+          <p class="foot-hover">Emergency: 24/7 Available</p>
+        </div>
+        <div class="line2-foot line2-foot2"></div>
+        <h4 class="end-fooot">Copyright © 2025 MediCare Plus - All Rights Reserved</h4>
+        <div class="line2-foot"></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Copy functionality for medical information tools
+    var btn1 = document.getElementById('btn1');
+    var btn2 = document.getElementById('btn2');
+    var btn3 = document.getElementById('btn3');
+
+    document.querySelectorAll('[id^="btn"]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        alert('✅ Medical information copied successfully');
+      });
+    });
+
+    // Initialize Bootstrap tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Medical appointment booking simulation
+    document.querySelectorAll('.custom-card .btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const specialty = this.closest('.card').querySelector('.card-title').textContent;
+        alert(`📅 Appointment request for ${specialty} has been submitted. We will contact you within 24 hours to confirm your appointment.`);
+      });
+    });
+
+    // Emergency contact simulation
+    document.querySelectorAll('.episode').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const serviceName = this.closest('.row').querySelector('.title-offers').textContent;
+        alert(`🏥 ${serviceName} - Our medical team will assist you shortly. Please hold the line.`);
+      });
+    });
+
+    // Health portal access simulation
+    document.querySelectorAll('.items').forEach(item => {
+      item.addEventListener('click', function(e) {
+        e.preventDefault();
+        const serviceName = this.querySelector('h5').textContent;
+        alert(`🔐 Accessing ${serviceName}... Please log in with your patient credentials.`);
+      });
+    });
+
+    // Form validation for patient portal
+    const loginForm = document.querySelector('#loginModal form');
+    if (loginForm) {
+      loginForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const email = document.getElementById('emailInput').value;
+        const password = document.getElementById('passwordInput').value;
+        
+        if (!email || !password) {
+          alert('⚠️ Please fill in all required fields.');
+          return;
+        }
+        
+        if (!email.includes('@')) {
+          alert('⚠️ Please enter a valid email address.');
+          return;
+        }
+        
+        alert('✅ Login successful! Welcome to your patient portal.');
+        // Close modal
+        const modal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+        modal.hide();
+      });
+    }
+
+    // Carousel auto-pause on hover
+    const carousel = document.querySelector('#demo');
+    if (carousel) {
+      carousel.addEventListener('mouseenter', function() {
+        bootstrap.Carousel.getInstance(this).pause();
+      });
+      
+      carousel.addEventListener('mouseleave', function() {
+        bootstrap.Carousel.getInstance(this).cycle();
+      });
+    }
+
+    // Navbar transparency effect on scroll
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 100) {
+        navbar.style.backgroundColor = 'rgba(244, 225, 193, 0.95)';
+      } else {
+        navbar.style.backgroundColor = 'rgba(244, 225, 193, 0.7)';
+      }
+    });
+
+    // Accordion accessibility improvements
+    document.querySelectorAll('.accordion-button').forEach(button => {
+      button.addEventListener('click', function() {
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !isExpanded);
+      });
+    });
+
+    // Medical information textarea placeholder rotation
+    const medicalPlaceholders = [
+      "Enter medical terms or symptoms...",
+      "Describe your health concerns...",
+      "Ask about medications or treatments...",
+      "Search for health information..."
+    ];
+
+    const textareas = document.querySelectorAll('textarea');
+    let placeholderIndex = 0;
+
+    setInterval(() => {
+      textareas.forEach((textarea, index) => {
+        if (textarea.value === '') {
+          textarea.placeholder = medicalPlaceholders[(placeholderIndex + index) % medicalPlaceholders.length];
+        }
+      });
+      placeholderIndex = (placeholderIndex + 1) % medicalPlaceholders.length;
+    }, 3000);
+
+    // Loading animation for medical services
+    function showLoadingAnimation(element) {
+      const originalText = element.textContent;
+      element.style.opacity = '0.7';
+      element.textContent = 'Loading...';
+      
+      setTimeout(() => {
+        element.style.opacity = '1';
+        element.textContent = originalText;
+      }, 1500);
+    }
+
+    // Add loading animations to service buttons
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        if (this.textContent.includes('Book') || this.textContent.includes('Schedule')) {
+          showLoadingAnimation(this);
+        }
+      });
+    });
+
+    // Health tip of the day (rotating content)
+    const healthTips = [
+      "💧 Stay hydrated - drink at least 8 glasses of water daily",
+      "🏃‍♀️ Exercise for 30 minutes daily to maintain good health",
+      "🥗 Eat a balanced diet rich in fruits and vegetables",
+      "😴 Get 7-8 hours of quality sleep each night",
+      "🧘‍♀️ Practice stress management through meditation or yoga",
+      "🚭 Avoid smoking and limit alcohol consumption",
+      "🦷 Maintain good oral hygiene - brush twice daily",
+      "🌞 Get some sunlight for natural vitamin D"
+    ];
+
+    // Display health tip in console (for demo purposes)
+    const todaysTip = healthTips[Math.floor(Math.random() * healthTips.length)];
+    console.log(`Today's Health Tip: ${todaysTip}`);
+
+    // Accessibility: Keyboard navigation for custom elements
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        if (e.target.classList.contains('custom-card') || e.target.classList.contains('items')) {
+          e.target.click();
+        }
+      }
+    });
+
+    // Medical emergency banner (simulated)
+    function showEmergencyBanner() {
+      const banner = document.createElement('div');
+      banner.innerHTML = `
+        <div class="alert alert-danger alert-dismissible fade show position-fixed w-100" style="top: 0; z-index: 10000;">
+          <strong>🚨 Medical Emergency?</strong> Call 911 immediately or visit our Emergency Department.
+          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+      `;
+      document.body.insertBefore(banner, document.body.firstChild);
+      
+      setTimeout(() => {
+        const alertElement = document.querySelector('.alert');
+        if (alertElement) {
+          alertElement.remove();
+        }
+      }, 10000);
+    }
+
+    // Show emergency banner randomly (for demo)
+    if (Math.random() < 0.3) {
+      setTimeout(showEmergencyBanner, 3000);
+    }
+
+    // Performance monitoring
+    window.addEventListener('load', function() {
+      const loadTime = performance.now();
+      console.log(`MediCare Plus website loaded in ${Math.round(loadTime)}ms`);
+    });
+
+    // Initialize all interactive features
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add focus indicators for accessibility
+      document.querySelectorAll('a, button, input, textarea').forEach(element => {
+        element.addEventListener('focus', function() {
+          this.style.outline = '2px solid #2E86AB';
+          this.style.outlineOffset = '2px';
+        });
+        
+        element.addEventListener('blur', function() {
+          this.style.outline = 'none';
+        });
+      });
+
+      // Add loading states to forms
+      document.querySelectorAll('form').forEach(form => {
+        form.addEventListener('submit', function() {
+          const submitBtn = this.querySelector('button[type="submit"]');
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Processing...';
+            
+            setTimeout(() => {
+              submitBtn.disabled = false;
+              submitBtn.textContent = 'Submit';
+            }, 2000);
+          }
+        });
+      });
+    });
+
+    // Medical data privacy notice
+    function showPrivacyNotice() {
+      const notice = document.createElement('div');
+      notice.innerHTML = `
+        <div class="modal fade" id="privacyModal" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header" style="background-color: #2E86AB; color: white;">
+                <h5 class="modal-title">🔒 Medical Privacy Notice</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <p>Your medical information is protected under HIPAA regulations. We ensure the highest level of privacy and security for all patient data.</p>
+                <p><strong>We never share your personal health information without your explicit consent.</strong></p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" style="background-color: #2E86AB;">I Understand</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(notice);
+      
+      const modal = new bootstrap.Modal(document.getElementById('privacyModal'));
+      modal.show();
+    }
+
+    // Show privacy notice for first-time visitors (simulated)
+    if (!localStorage.getItem('privacyNoticeShown')) {
+      setTimeout(showPrivacyNotice, 5000);
+      localStorage.setItem('privacyNoticeShown', 'true');
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
